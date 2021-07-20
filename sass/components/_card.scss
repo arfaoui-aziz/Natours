@@ -85,10 +85,13 @@
     top: 12rem;
     right: 2rem;
     width: 75%;
-    padding: 1rem 1.5rem;
-    -webkit-box-decoration-break: clone;
-    box-decoration-break: clone;
+  }
 
+  &__heading-span {
+    padding: 1rem 1.5rem;
+    // box-decoration-break: clone -> to clone style in the same Selector for each line
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
     &--1 {
       background-image: linear-gradient(
         to right bottom,
