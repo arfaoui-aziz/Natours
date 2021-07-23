@@ -13,13 +13,13 @@
   //   font-size: 50%;
   // }
 
-  //width < 900
+  //width < 1200
   @include respond(tab-land) {
     //1rem = 9px  9/16 = 56.25%
     font-size: 56.25%;
   }
 
-  //width < 600 < 900  we put it after width 900 to ovveride style of width <  900
+  //width < 900 < 1200  we put it after width 1200 to ovveride style of width <  1200
   @include respond(tab-port) {
     //1rem = 8px  8/16 = 50%
     font-size: 50%;
@@ -35,4 +35,8 @@
 body {
   box-sizing: border-box;
   padding: 3rem;
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
 }
