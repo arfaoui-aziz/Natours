@@ -7,8 +7,28 @@
   box-sizing: inherit;
 }
 :root {
-  /*  10/16px * 100 */
+  /*  10/16px * 100  1rem= 10px  */
   font-size: 62.5%;
+  // @include respond-phone {
+  //   font-size: 50%;
+  // }
+
+  //width < 900
+  @include respond(tab-land) {
+    //1rem = 9px  9/16 = 56.25%
+    font-size: 56.25%;
+  }
+
+  //width < 600 < 900  we put it after width 900 to ovveride style of width <  900
+  @include respond(tab-port) {
+    //1rem = 8px  8/16 = 50%
+    font-size: 50%;
+  }
+
+  @include respond(big-destop) {
+    // 1rem = 12px  12/16 = 75%
+    font-size: 75%;
+  }
 }
 
 /* we put it in the body so we can use inheritance */
